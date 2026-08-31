@@ -1,101 +1,283 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Academic & Professional Portfolio
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+A modern, responsive Jekyll-based portfolio website showcasing academic research, publications, talks, teaching experience, and professional projects.
 
-# Getting Started
+## 📋 Overview
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+This portfolio site is built with Jekyll and hosted on GitHub Pages. It features:
 
-See more info at https://academicpages.github.io/
+- **Publications** - Display academic papers and research work
+- **Talks & Presentations** - Showcase conference talks and seminars
+- **Teaching** - Document teaching experience and courses
+- **Blog Posts** - Share insights and regular content
+- **Portfolio Projects** - Highlight key professional work
+- **CV/Resume** - Professional experience and qualifications
+- **Responsive Design** - Mobile-friendly interface
+- **Docker Support** - Containerized local development
 
-### Additional Tutorials
+## 🚀 Quick Start
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+### Option 1: Local Installation (Recommended)
 
-## Running locally
+**Prerequisites:**
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+- Ruby 2.7+
+- Bundler
+- Git
 
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
+**Setup:**
 
 ```bash
-chmod -R 777 .
-docker compose up
+# Clone the repository
+git clone https://github.com/madhavr35/madhavr35.github.io.git
+cd madhavr35.github.io
+
+# Install dependencies
+bundle install
+
+# Start the Jekyll development server
+bundle exec jekyll serve
+
+# Visit http://localhost:4000
 ```
 
-You should now be able to access the website from `localhost:4000`.
+### Option 2: Docker Setup
 
-### Using the DevContainer in VS Code
+**Prerequisites:**
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+- Docker
+- Docker Compose
 
-# Maintenance
+```bash
+# Build and run the container
+docker-compose up
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+# Visit http://localhost:4000
+```
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+## 📁 Directory Structure
 
-## Bugfixes and enhancements
+```
+.
+├── _posts/              # Blog posts (YYYY-MM-DD-title.md)
+├── _publications/       # Academic papers
+├── _talks/              # Conference talks and presentations
+├── _teaching/           # Teaching experience and courses
+├── _portfolio/          # Portfolio projects and case studies
+├── _pages/              # Static pages (about, CV, archive, etc.)
+├── _layouts/            # Jekyll template layouts
+├── _includes/           # Reusable template components
+├── _sass/               # SCSS stylesheets
+├── _data/               # Data files (navigation, authors, CV)
+├── assets/              # Static files (CSS, JS, images)
+├── files/               # downloadable files
+├── images/              # Image assets
+├── _config.yml          # Main Jekyll configuration
+└── Gemfile              # Ruby dependencies
+```
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
+## ✏️ Adding Content
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+### Blog Posts
+
+Create a new file in `_posts/` with format: `YYYY-MM-DD-post-title.md`
+
+```markdown
+---
+title: "Post Title"
+date: 2024-01-15
+permalink: /posts/2024/01/post-title/
+categories: [technology, development]
+tags: [jekyll, github-pages]
+excerpt: "Brief description of your post"
+---
+
+Your post content here...
+```
+
+### Publications
+
+Create a file in `_publications/` with format: `YYYY-MM-DD-paper-title.md`
+
+```markdown
+---
+title: "Paper Title"
+collection: publications
+permalink: /publication/2024-01-15-paper-title
+date: 2024-01-15
+venue: "Conference Name"
+citation: 'Author, Year. "Title." Venue.'
+---
+
+Paper abstract and details...
+```
+
+### Talks
+
+Create a file in `_talks/` with format: `YYYY-MM-DD-talk-title.md`
+
+```markdown
+---
+title: "Talk Title"
+collection: talks
+type: "Talk"
+permalink: /talks/2024-01-15-talk-title
+date: 2024-01-15
+location: "Conference, City"
+---
+
+Talk description and details...
+```
+
+### Teaching
+
+Create a file in `_teaching/` with format: `YYYY-season-course-name.md`
+
+```markdown
+---
+title: "Course Name"
+collection: teaching
+type: "Course"
+permalink: /teaching/2024-spring-course-name
+date: 2024-01-15
+location: "Institution"
+---
+
+Course description, materials, and details...
+```
+
+### Portfolio Projects
+
+Create a file in `_portfolio/` with format: `project-name.md` or `.html`
+
+```markdown
+---
+title: "Project Name"
+excerpt: "Short project description"
+header:
+  image: /images/project-image.png
+  teaser: /images/project-teaser.png
+---
+
+Project details, methodology, and results...
+```
+
+## ⚙️ Configuration
+
+Edit `_config.yml` to customize:
+
+- **Site Title & Description** - Main site metadata
+- **Author Information** - Your name, bio, social profiles
+- **Navigation** - Edit `_data/navigation.yml` for menu items
+- **Theme Settings** - Colors, fonts, and layout options
+- **URL & Baseurl** - For GitHub Pages deployment
+
+### Key Configuration Files
+
+- `_config.yml` - Main configuration
+- `_config_docker.yml` - Docker-specific overrides
+- `_data/navigation.yml` - Menu structure
+- `_data/authors.yml` - Author profiles
+- `_data/cv.json` - CV data (if using structured format)
+
+## 🔧 Development
+
+### Build the site (without serving):
+
+```bash
+bundle exec jekyll build
+```
+
+### Watch for changes:
+
+```bash
+bundle exec jekyll serve --livereload
+```
+
+### Run linting/checks:
+
+```bash
+# Check for errors
+bundle exec jekyll doctor
+```
+
+## 🚢 Deployment
+
+### Automatic (GitHub Pages)
+
+The site automatically deploys when you push to the `main` or `master` branch (if using GitHub Pages with Jekyll).
+
+**Requirements:**
+
+- Repository name: `USERNAME.github.io`
+- GitHub Pages enabled in repository settings
+- Branch set to publish from: `main` or `master`
+
+### Manual Build & Deploy
+
+```bash
+# Build the site
+bundle exec jekyll build
+
+# The static site is in the _site/ directory
+# Deploy to your hosting platform
+```
+
+## 📝 Common Tasks
+
+**Update Navigation Menu:**
+Edit `_data/navigation.yml`
+
+**Add Social Links:**
+Edit `_data/authors.yml`
+
+**Change Site Colors/Fonts:**
+Modify `_sass/_themes.scss` and `_sass/_variables.scss`
+
+**Add Custom CSS:**
+Create/edit `assets/css/main.scss`
+
+**Update CV:**
+Edit `_pages/cv.md` or `_data/cv.json`
+
+## 🛠️ Built With
+
+- **Jekyll** - Static site generator
+- **SASS/SCSS** - Stylesheets
+- **Minimal Mistakes** - Jekyll theme (customized)
+- **GitHub Pages** - Hosting
+- **Docker** - Containerization
+
+## 📦 Dependencies
+
+See [Gemfile](Gemfile) for complete Ruby dependencies.
+
+Key gems:
+
+- `jekyll` - Static site generator
+- `jekyll-paginate-v2` - Pagination
+- `jekyll-gist` - GitHub Gist embedding
+- `jemoji` - Emoji support
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## 🤝 Contributing
+
+Found a bug or have suggestions? Please open an issue or submit a pull request.
+
+## 📧 Contact
+
+Connect with me:
+
+- 📍 [GitHub](https://github.com/madhavr35)
+- 📚 [Portfolio](https://madhavr35.github.io)
+- 📝 Check `_data/authors.yml` for additional social links
+
+---
+
+**Last Updated:** 2026
+**Maintained by:** Madhav Ramesh
