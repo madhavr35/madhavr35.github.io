@@ -57,7 +57,7 @@ docker-compose up
 
 ## 📁 Directory Structure
 
-```
+```plaintext
 .
 ├── _posts/              # Blog posts (YYYY-MM-DD-title.md)
 ├── _publications/       # Academic papers
@@ -182,19 +182,19 @@ Edit `_config.yml` to customize:
 
 ## 🔧 Development
 
-### Build the site (without serving):
+### Build the site (without serving)
 
 ```bash
 bundle exec jekyll build
 ```
 
-### Watch for changes:
+### Watch for changes
 
 ```bash
 bundle exec jekyll serve --livereload
 ```
 
-### Run linting/checks:
+### Run linting/checks
 
 ```bash
 # Check for errors
