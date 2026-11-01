@@ -7,5 +7,8 @@ redirect_from:
   - /wordpress/reflections/
 ---
 
-{% include base_path %} {% for post in site.posts %} {% include
-archive-single.html %} {% endfor %}
+{% include base_path %}
+{% assign posts = site.posts | sort: "date" %}
+{% for post in posts %}
+  {% include archive-single.html %}
+{% endfor %}
