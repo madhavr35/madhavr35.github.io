@@ -1,6 +1,7 @@
 .contact-page {
   max-width: $medium-wide;
   margin: 0 auto;
+  background-color: var(--global-bg-color);
 }
 
 .contact-page__title {
@@ -126,7 +127,9 @@
     text-decoration: none;
     border: 1px solid var(--global-border-color);
     border-radius: 50%;
-    transition: color 0.2s ease, background-color 0.2s ease;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
 
     &:hover,
     &:focus-visible {
