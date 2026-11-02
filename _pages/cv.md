@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Resume"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,55 +9,37 @@ redirect_from:
 
 {% include base_path %}
 
-# Education
+## PDF Resume
+
+<iframe src="{{ base_path }}/files/resume.pdf" title="Resume PDF" width="100%" height="900" loading="lazy">
+  <a href="{{ base_path }}/files/resume.pdf">View or download the resume PDF</a>
+</iframe>
+
+<!-- # Education
 
 - M.S. in Electrical Engineering, University at Buffalo, 2026
-- B.Tech. in Electronics and Communication, TKM College of Engineering, 2022
+- B.Tech. in Electronics and Communication Engineering, TKM College of Engineering, 2022
 
 # Work experience
 
-- Spring 2024: Academic Pages Collaborator
-  - GitHub University
-  - Duties includes: Updates and improvements to template
-  - Supervisor: The Users
+- **Renewable Energy Intern**
+  - GMR Group, New Delhi, India
+  - June 2026 - July 2026
 
-- Fall 2015: Research Assistant
-  - GitHub University
-  - Duties included: Merging pull requests
-  - Supervisor: Professor Hub
+- **Software Engineer**
+  - Quest Global, Trivandrum, India
+  - June 2023 - June 2025
 
-- Summer 2015: Research Assistant
-  - GitHub University
-  - Duties included: Tagging issues
-  - Supervisor: Professor Git
+- **Software Engineer**
+  - Onesoft Technologies, Kochi, India
+  - August 2022 - May 2023
+
+# Volunteer Experience
+
+- Kerala Flood Relief Fund, Trivandrum, India (2018)
 
 # Skills
 
-- Skill 1
-- Skill 2
-  - Sub-skill 2.1
-  - Sub-skill 2.2
-  - Sub-skill 2.3
-- Skill 3
-
-# Publications
-
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+- MATLAB
+- JavaScript
+- Python -->
